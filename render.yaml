@@ -1,0 +1,17 @@
+# Despliegue en Render (https://render.com) — "Blueprint"
+services:
+  - type: web
+    name: vg-moda
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false          # la pegas en el panel de Render (no queda en GitHub)
+      - key: MONGODB_DB
+        value: vg_moda
+      - key: SESSION_SECRET
+        generateValue: true

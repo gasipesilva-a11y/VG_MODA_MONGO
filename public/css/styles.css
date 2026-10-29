@@ -1,0 +1,573 @@
+/* =========================
+   IMPORTAR FUENTES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cinzel:wght@400;500&display=swap');
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px !important;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f8f8;
+    color: black;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background: black;
+    padding: 14px 0;
+}
+
+/* Logo principal */
+.logo{
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: white !important;
+    letter-spacing: 2px;
+}
+
+/* Enlaces del menú */
+.nav-link{
+    color: white !important;
+    position: relative;
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+
+/* Línea animada debajo del enlace */
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Mostrar línea al pasar el mouse */
+.nav-link:hover::after{
+    width: 100%;
+}
+
+/* Mostrar línea en enlace activo */
+.nav-link.activo::after{
+    width: 100%;
+}
+
+
+/* =========================
+   SECCIÓN INICIO
+========================= */
+
+.inicio{
+    padding-top: 90px;
+}
+
+/* Título principal */
+.titulo-principal{
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: black;
+}
+
+/* Texto descriptivo */
+.texto-inicio{
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton-coleccion,
+.btn-producto{
+    display: inline-block;
+    padding: 10px 24px;
+    margin-top: 12px;
+
+    background: black;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Animación hover botones */
+.boton-coleccion:hover,
+.btn-producto:hover{
+    background: #222;
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.banner{
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+
+/* =========================
+   TITULOS GENERALES
+========================= */
+
+.titulo{
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    color: black;
+
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PRODUCTOS INICIO
+========================= */
+
+.producto{
+    background: white;
+    padding: 12px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* Efecto hover producto */
+.producto:hover{
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Imagen producto */
+.producto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Nombre producto */
+.producto h5{
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: black;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   SECCIÓN ACERCA DE
+========================= */
+
+.acerca{
+    background: #f8f8f8;
+}
+
+.titulo-acerca{
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    color: black;
+}
+
+.texto-acerca{
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Imagen sección acerca */
+.imagen-acerca{
+    width: 85%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto{
+    background: black;
+}
+
+.contacto h2{
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    color: white;
+}
+
+.contacto p,
+.info-contacto{
+    color: white;
+    font-size: 15px;
+}
+
+
+/* =========================
+   PRECIOS
+========================= */
+
+.precio{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   PRODUCTOS - VER MÁS
+========================= */
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(2,280px);
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 15px;
+    padding-bottom: 25px;
+
+    position: relative;
+}
+
+/* Líneas decorativas laterales */
+.contenedor-productos::before,
+.contenedor-productos::after{
+    content: "";
+    position: absolute;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: black;
+}
+
+.contenedor-productos::before{
+    left: 240px;
+}
+
+.contenedor-productos::after{
+    right: 240px;
+}
+
+/* Tarjeta producto */
+.card-producto{
+    background: white;
+
+    text-align: center;
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    padding-bottom: 12px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* Imagen tarjeta */
+.card-producto img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Nombre producto */
+.card-producto h4{
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    color: black;
+    margin-top: 10px;
+}
+
+/* Descripción producto */
+.card-producto p{
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+
+/* =========================
+   BOTÓN VOLVER
+========================= */
+
+.volver{
+    display: inline-block;
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    padding: 12px 28px;
+
+    background: black;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.volver:hover{
+    background: #222;
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 22px rgba(0,0,0,0.20);
+}
+
+
+/* =========================
+   BOTÓN LOGIN
+========================= */
+
+.btn-login{
+    border: 2px solid white;
+    border-radius: 8px;
+
+    padding: 8px 18px !important;
+    margin-left: 15px;
+
+    transition: 0.3s;
+}
+
+.btn-login:hover{
+    background: white;
+    color: black !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .titulo-principal{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .texto-inicio{
+        text-align: center;
+    }
+
+    .boton-coleccion{
+        display: block;
+        margin: 20px auto;
+    }
+
+    .banner{
+        height: 250px;
+        margin-top: 25px;
+    }
+
+    .contenedor-productos{
+        grid-template-columns: 1fr;
+    }
+
+    .titulo{
+        font-size: 32px;
+    }
+
+}
+/* =========================
+   PANEL ADMINISTRADOR
+========================= */
+
+.panel-admin{
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+.panel-admin h1{
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.panel-admin p{
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Tarjetas estadísticas */
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.stat-box{
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.stat-box:hover{
+    transform: translateY(-5px);
+}
+
+.stat-box h3{
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+/* Formularios */
+
+.form-admin{
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.form-admin input,
+.form-admin select,
+.form-admin textarea{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-admin input:focus,
+.form-admin select:focus,
+.form-admin textarea:focus{
+    border: 1px solid black;
+}
+
+/* Botones */
+
+.btn-admin{
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-admin:hover{
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* Tablas */
+
+.tabla-admin{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.tabla-admin th{
+    background: black;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+.tabla-admin td{
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-admin tr:hover{
+    background: #f7f7f7;
+}
+
+/* Estado */
+
+.estado{
+    background: black;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .panel-admin{
+        padding: 20px;
+    }
+
+    .panel-admin h1{
+        font-size: 30px;
+    }
+
+    .tabla-admin{
+        font-size: 13px;
+    }
+
+}
